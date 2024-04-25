@@ -1,0 +1,93 @@
+@keyframes watertankflow {
+    from {height: 100%; top: 0; border-top-left-radius: 30px; border-top-right-radius: 30px;}
+    to {height: 0; top: 100%; border-top-left-radius: 0; border-top-right-radius: 0;}
+}
+
+@keyframes waterflow {
+    from {height: 100vh; top: 100%;}
+    to {height:0; top: 100%;  }
+}
+
+
+.tank {
+    position: relative; 
+    margin-left: 200px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 70vh;
+    width: 45vh;
+    background-color: #555;
+}
+
+
+
+
+.water {
+    position: absolute;
+    animation: watertankflow 30s linear forwards;
+    animation-play-state: paused;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 70vh;
+    width: 45vh;
+    background-color: rgb(0, 140, 255);
+    overflow: hidden; /* Hide overflow */
+}
+
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+    margin-left: 315px;
+    height: 20px;
+    width: 420px;
+    background-color: #555;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.tap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 690px;
+    margin-bottom: 20px;
+    height: 20px;
+    width: 50px;
+    z-index: 6;
+    background-color: red;
+}
+
+.tappipe {
+    position: absolute;
+    margin-left: 910px;
+    height: 40px;
+    width: 20px;
+    z-index: 6;
+    margin-bottom: 10px;
+    background-color: #555;
+}
+
+.tapwater {
+    position: absolute;
+    bottom: 0;
+
+    left: 0px; 
+    animation: waterflow 30s linear forwards;
+    animation-play-state: paused;
+    height: 200vh; 
+    width: 20px;
+    background-color: white;
+}
